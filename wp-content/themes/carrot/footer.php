@@ -33,7 +33,9 @@
                             </div>
                         </div>
                         <div class="right-block">
-                            <div class="graph-block"><img src="<?= get_sub_field('right_side_image'); ?>"></div>
+                            <?php if(get_sub_field('right_side_image')) : ?>
+                                <div class="graph-block"><img src="<?= get_sub_field('right_side_image'); ?>"></div>
+                            <?php endif; ?>
                             <div class="inform-block-bottom">
                                 <?= get_sub_field('right_side_text'); ?>
                             </div>
