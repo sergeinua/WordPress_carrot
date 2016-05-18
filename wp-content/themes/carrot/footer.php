@@ -51,15 +51,16 @@
             <?php endwhile; ?>
 
         <?php endif; ?>
-
+        
         <script>
             var scr = {"scripts":[
                 {"src" : "wp-content/themes/carrot/html/dist/libs/jquery/jquery-1.12.3.min.js", "async" : false},
                 {"src" : "wp-content/themes/carrot/html/dist/libs/modal_boo/bootstrap.min.js", "async" : false},
+                {"src" : "wp-content/themes/carrot/html/dist/libs/animate/animate-css.js", "async" : false},
+                {"src" : "wp-content/themes/carrot/html/dist/libs/waypoints/jquery.waypoints.min.js", "async" : false},
                 {"src" : "wp-content/themes/carrot/html/dist/js/common.js", "async" : false}
             ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
         </script>
-
     </body>
 
     <?php wp_footer(); ?>
