@@ -49,15 +49,17 @@
 
         <div class="header-left-wrap">
             <div class="header-left">
-                <?php if (have_rows('home_upper_block_text')) : ?>
+                <div class="h1">
+                    <?php if (have_rows('home_upper_block_text')) : ?>
 
-                    <?php while (have_rows('home_upper_block_text')) : the_row(); ?>
+                        <?php while (have_rows('home_upper_block_text')) : the_row(); ?>
 
-                        <div class="h1"><?= get_sub_field('line'); ?></div>
+                            <?= get_sub_field('line'); ?>
 
-                    <?php endwhile; ?>
+                        <?php endwhile; ?>
 
-                <?php endif; ?>
+                    <?php endif; ?>
+                </div>
                 <div class="btn-wrap">
                     <button href="#callback" data-toggle="modal" data-target="#basicModal" class="buttons">Заказать сейчас</button>
                 </div>

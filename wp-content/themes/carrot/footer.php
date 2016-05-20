@@ -13,7 +13,133 @@
 
             </div>
         </div>
+        <div class="more-window-1">
+            <div class="more-window-inner">
+                <div class="close-wrap">
+                    <div class="close-1"></div>
+                </div>
+                <div class="wrapper">
+                    <div class="h2"><?= get_field('home_text_block_2_title'); ?></div>
+                    <div class="blocks-wrapper">
+                        <div class="inform-block-left">
+                            <div class="image-block"><img src="<?= get_field('home_text_block_2_img'); ?>"></div>
+                            <?= get_field('home_text_block_2_text'); ?>
+                        </div>
+                        <div class="inform-block-right">
+                            <?= get_field('slide_block_1_right_text'); ?>
+                            <?php if(get_field('slide_block_1_right_img')) : ?>
+                                <div class="graph-block"><img src="<?= get_field('slide_block_1_right_img'); ?>"></div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <a class="buttons" href="<?= get_field('slide_block_1_link'); ?>">Полная документация</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="more-window-2">
+            <div class="more-window-inner">
+                <div class="close-wrap">
+                    <div class="close-2"></div>
+                </div>
+                <div class="wrapper">
+                    <div class="h2"><?= get_field('home_text_block_3_title'); ?></div>
+                    <div class="blocks-wrapper">
+                        <div class="inform-block-left">
+                            <div class="image-block"><img src="<?= get_field('home_text_block_3_img'); ?>"></div>
+                            <?= get_field('home_text_block_3_text'); ?>
+                        </div>
+                        <div class="inform-block-right">
+                            <?= get_field('slide_block_2_right_text'); ?>
+                            <?php if(get_field('slide_block_2_right_img')) : ?>
+                                <div class="graph-block"><img src="<?= get_field('slide_block_2_right_img'); ?>"></div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <a class="buttons" href="<?= get_field('slide_block_2_link'); ?>">Полная документация</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+
+
+
+
+        <div class="more-window-3">
+            <div class="more-window-inner">
+                <div class="close-wrap">
+                    <div class="close-3"></div>
+                </div>
+                <div class="wrapper">
+                    <div class="h2"><?= get_field('home_text_block_4_title'); ?></div>
+                    <div class="blocks-wrapper">
+                        <div class="inform-block-left">
+                            <div class="image-block"><img src="<?= get_field('home_text_block_4_img'); ?>"></div>
+                            <?= get_field('home_text_block_4_text'); ?>
+                        </div>
+                        <div class="inform-block-right">
+                            <?= get_field('slide_block_3_right_text'); ?>
+                            <?php if(get_field('slide_block_3_right_img')) : ?>
+                                <div class="graph-block"><img src="<?= get_field('slide_block_3_right_img'); ?>"></div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <a class="buttons" href="<?= get_field('slide_block_3_link'); ?>">Полная документация</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="more-window-4">
+            <div class="more-window-inner">
+                <div class="close-wrap">
+                    <div class="close-4"></div>
+                </div>
+                <div class="wrapper">
+                    <div class="h2"><?= get_field('home_text_block_5_title'); ?></div>
+                    <div class="blocks-wrapper">
+                        <div class="inform-block-left">
+                            <div class="image-block"><img src="<?= get_field('home_text_block_5_img'); ?>"></div>
+                            <?= get_field('home_text_block_5_text'); ?>
+                        </div>
+                        <div class="inform-block-right">
+                            <?= get_field('home_text_block_4_text'); ?>
+                            <?php if(get_field('slide_block_4_right_img')) : ?>
+                                <div class="graph-block"><img src="<?= get_field('slide_block_4_right_img'); ?>"></div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <a class="buttons" href="<?= get_field('slide_block_4_link'); ?>">Полная документация</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script>
+            var scr = {"scripts":[
+                {"src" : "wp-content/themes/carrot/html/dist/libs/jquery/jquery-1.12.3.min.js", "async" : false},
+                {"src" : "wp-content/themes/carrot/html/dist/libs/modal_boo/bootstrap.min.js", "async" : false},
+                {"src" : "wp-content/themes/carrot/html/dist/libs/animate/animate-css.js", "async" : false},
+                {"src" : "wp-content/themes/carrot/html/dist/libs/waypoints/jquery.waypoints.min.js", "async" : false},
+                {"src" : "wp-content/themes/carrot/html/dist/js/common.js", "async" : false}
+            ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+        </script>
+    </body>
+
+    <?php wp_footer(); ?>
+
+</html>
+
+<?php die; /*left untill the fields would be filled */?>
         <?php $i=1; ?>
 
         <?php if (have_rows('sliding_block')) : ?>
@@ -51,19 +177,3 @@
             <?php endwhile; ?>
 
         <?php endif; ?>
-        
-        <script>
-            var scr = {"scripts":[
-                {"src" : "wp-content/themes/carrot/html/dist/libs/jquery/jquery-1.12.3.min.js", "async" : false},
-                {"src" : "wp-content/themes/carrot/html/dist/libs/modal_boo/bootstrap.min.js", "async" : false},
-                {"src" : "wp-content/themes/carrot/html/dist/libs/animate/animate-css.js", "async" : false},
-                {"src" : "wp-content/themes/carrot/html/dist/libs/waypoints/jquery.waypoints.min.js", "async" : false},
-                {"src" : "wp-content/themes/carrot/html/dist/js/common.js", "async" : false}
-            ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
-        </script>
-    </body>
-
-    <?php wp_footer(); ?>
-
-</html>
-

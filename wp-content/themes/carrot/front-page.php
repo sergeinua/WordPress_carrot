@@ -8,95 +8,74 @@
     </div>
     <div class="about-title"><?= get_field('home_text_block_1_title'); ?></div>
 </section>
-
-
 <section id="firstSection" class="section-1 s-light">
     <div class="wrapper">
-        <div class="img-block"><img src="<?= get_template_directory_uri(); ?>/html/dist/img/section_1/img_gsm.svg"></div>
+        <div class="img-block"><img src="<?= get_field('home_text_block_2_img'); ?>"></div>
         <div class="info-block">
             <div class="h2"><?= get_field('home_text_block_2_title'); ?></div>
             <p><?= get_field('home_text_block_2_text'); ?></p>
             <div class="btn-wrap">
-                <button class="buttons btn-more-sect-1"><?= get_field('home_text_block_2_button_text'); ?></button>
+                <button class="buttons btn-more-sect-1">Подробнее</button>
             </div>
         </div>
     </div>
 </section>
-
-
 <section id="secondSection" class="section-2 s-light">
     <div class="wrapper">
-        <div class="img-block"><img src="<?= get_template_directory_uri(); ?>/html/dist/img/section_2/img_gps2.svg"></div>
+        <div class="img-block"><img src="<?= get_field('home_text_block_3_img'); ?>"></div>
         <div class="info-block">
             <div class="h2"><?= get_field('home_text_block_3_title'); ?></div>
             <p><?= get_field('home_text_block_3_text'); ?></p>
             <div class="btn-wrap">
-                <button class="buttons btn-more-sect-2"><?= get_field('home_text_block_3_button_text'); ?></button>
+                <button class="buttons btn-more-sect-2">Подробнее</button>
             </div>
         </div>
     </div>
 </section>
-
-
 <section id="thirdSection" class="section-3 s-light">
     <div class="wrapper">
-        <div class="img-block"><img src="<?= get_template_directory_uri(); ?>/html/dist/img/section_3/img_list3.svg"></div>
+        <div class="img-block"><img src="<?= get_field('home_text_block_4_img'); ?>"></div>
         <div class="info-block">
             <div class="h2"><?= get_field('home_text_block_4_title'); ?></div>
             <p><?= get_field('home_text_block_4_text'); ?></p>
             <div class="btn-wrap">
-                <button class="buttons btn-more-sect-3"><?= get_field('home_text_block_4_button_text'); ?></button>
+                <button class="buttons btn-more-sect-3">Подробнее</button>
             </div>
         </div>
     </div>
 </section>
-
-
 <section id="fourthSection" class="section-4 s-light">
     <div class="wrapper">
-        <div class="img-block"><img src="<?= get_template_directory_uri(); ?>/html/dist/img/section_4/img_stat4.svg"></div>
+        <div class="img-block"><img src="<?= get_field('home_text_block_5_img'); ?>"></div>
         <div class="info-block">
             <div class="h2"><?= get_field('home_text_block_5_title'); ?></div>
             <p><?= get_field('home_text_block_5_text'); ?></p>
             <div class="btn-wrap">
-                <button class="buttons btn-more-sect-4"><?= get_field('home_text_block_5_button_text'); ?></button>
+                <button class="buttons btn-more-sect-4">Подробнее</button>
             </div>
         </div>
     </div>
 </section>
-
 <section class="section-5 s-carrot">
     <div class="wrapper">
         <div class="h2"><?= get_field('home_icon_block_title'); ?></div>
         <div class="items-icons-wrap">
-            <?php if (have_rows('home_icon_block')) : ?>
+            <div class="items-wrap">
+                <?php if (have_rows('home_icon_block')) : ?>
 
-                <?php while (have_rows('home_icon_block')) : the_row(); ?>
+                    <?php while (have_rows('home_icon_block')) : the_row(); ?>
 
-                    <?php if(get_sub_field('visible') == true) : ?>
+                        <?php if(get_sub_field('visible') == true) : ?>
+                            <div class="stat-itm">
+                                <div class="stat-itm-icon"><img src="<?= get_sub_field('icon'); ?>"></div>
+                                <div class="stat-itm-descr"><span><?= get_sub_field('text'); ?></span></div>
+                            </div>
+                        <?php endif; ?>
 
-                        <div class="stat-itm-icon"><img src="<?= get_sub_field('icon'); ?>"></div>
+                    <?php endwhile; ?>
 
-                    <?php endif; ?>
-
-                <?php endwhile; ?>
-
-            <?php endif; ?>
-        </div>
-        <div class="items-descr-wrap">
-            <?php if (have_rows('home_icon_block')) : ?>
-
-                <?php while (have_rows('home_icon_block')) : the_row(); ?>
-
-                    <?php if(get_sub_field('visible') == true) : ?>
-
-                        <div class="stat-itm-descr"><span><?= get_sub_field('text'); ?></span></div>
-
-                    <?php endif; ?>
-
-                <?php endwhile; ?>
-
-            <?php endif; ?>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
     <div class="about-title"><?= get_field('home_icon_block_text'); ?></div>
