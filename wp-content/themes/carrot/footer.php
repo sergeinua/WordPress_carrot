@@ -1,10 +1,30 @@
 
         <footer class="footer">
             <nav class="bottom-nav">
-                <div class="logo"><img src="<?= get_template_directory_uri(); ?>/html/dist/img/logos/logo.png" alt="logo"></div>
-                <div class="copyright"><a href="http://www.reclamare.ua/" target="_blank">Разработка сайта: Студия Reclamare</a></div>
+                <div class="logo"><img src="<?= get_template_directory_uri(); ?>/html/dist/img/logos/CarrotLogo.png" alt="logo"></div>
+
+                <address class="requisites">
+                    <div class="phones">
+                        <?php if(wp_is_mobile()) : ?>
+                        <a href="tel:"><span>+38(044)369-30-90</span></a>
+                        <a href="tel:"><span>+38(044)369-30-95</span></a>
+                        <?php else : ?>
+                            <a href="skype:"><span>+38(044)369-30-90</span></a>
+                            <a href="skype:"><span>+38(044)369-30-95</span></a>
+                        <?php endif; ?>
+                    </div>
+                    <div class="email"><a href="mailto:info@carrotholding.com">info@carrotholding.com</a></div>
+                    <div class="address">
+                        <p>г. Киев, ул. Михаила Гришка, 9</p>
+                    </div>
+                </address>
+
+                <div class="copyright"><a href="https://www.reclamare.ua/" target="_blank"><span class="reclamare"></span><span>Разработка сайта: Студия Reclamare</span></a></div>
             </nav>
         </footer>
+
+
+
         <div id="basicModal" data-easein="bounceUpIn" aria-labelledby="costumModalLabel" aria-hidden="true" tabindex="-1" class="modal fade">
             <div class="modal-dialog modal-form"><span class="h4"></span>
                 <button type="button" data-dismiss="modal" class="close-modal"><span></span><span></span></button>
@@ -23,7 +43,19 @@
                     <div class="blocks-wrapper">
                         <div class="inform-block-left">
                             <div class="image-block"><img src="<?= get_field('home_text_block_2_img'); ?>"></div>
-                            <?= get_field('home_text_block_2_text'); ?>
+                            <?= get_field('slide_block_1_left_text'); ?>
+                            <div class="clear"></div>
+                            <?php if(get_field('slide_block_1_left_icons')) : ?>
+                                    <div class="icons-block">
+                                        <ul>
+                                            <?php while (have_rows('slide_block_1_left_icons')) : the_row(); ?>
+                                                <li>
+                                                    <div class="icon-inner"><img src="<?= get_sub_field('icon'); ?>" class="icon"><span class="descr"><?= get_sub_field('label'); ?></span></div>
+                                                </li>
+                                            <?php endwhile; ?>
+                                        </ul>
+                                    </div>
+                            <?php endif; ?>
                         </div>
                         <div class="inform-block-right">
                             <?= get_field('slide_block_1_right_text'); ?>
@@ -48,7 +80,19 @@
                     <div class="blocks-wrapper">
                         <div class="inform-block-left">
                             <div class="image-block"><img src="<?= get_field('home_text_block_3_img'); ?>"></div>
-                            <?= get_field('home_text_block_3_text'); ?>
+                            <?= get_field('slide_block_2_left_text'); ?>
+                            <div class="clear"></div>
+                            <?php if(get_field('slide_block_2_left_icons')) : ?>
+                                <div class="icons-block">
+                                    <ul>
+                                        <?php while (have_rows('slide_block_2_left_icons')) : the_row(); ?>
+                                            <li>
+                                                <div class="icon-inner"><img src="<?= get_sub_field('icon'); ?>" class="icon"><span class="descr"><?= get_sub_field('label'); ?></span></div>
+                                            </li>
+                                        <?php endwhile; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
                         </div>
                         <div class="inform-block-right">
                             <?= get_field('slide_block_2_right_text'); ?>
@@ -63,11 +107,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
         <div class="more-window-3">
             <div class="more-window-inner">
                 <div class="close-wrap">
@@ -78,7 +117,19 @@
                     <div class="blocks-wrapper">
                         <div class="inform-block-left">
                             <div class="image-block"><img src="<?= get_field('home_text_block_4_img'); ?>"></div>
-                            <?= get_field('home_text_block_4_text'); ?>
+                            <?= get_field('slide_block_3_left_text'); ?>
+                            <div class="clear"></div>
+                            <?php if(get_field('slide_block_3_left_icons')) : ?>
+                                <div class="icons-block">
+                                    <ul>
+                                        <?php while (have_rows('slide_block_3_left_icons')) : the_row(); ?>
+                                            <li>
+                                                <div class="icon-inner"><img src="<?= get_sub_field('icon'); ?>" class="icon"><span class="descr"><?= get_sub_field('label'); ?></span></div>
+                                            </li>
+                                        <?php endwhile; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
                         </div>
                         <div class="inform-block-right">
                             <?= get_field('slide_block_3_right_text'); ?>
@@ -93,8 +144,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="more-window-4">
             <div class="more-window-inner">
                 <div class="close-wrap">
@@ -105,10 +154,22 @@
                     <div class="blocks-wrapper">
                         <div class="inform-block-left">
                             <div class="image-block"><img src="<?= get_field('home_text_block_5_img'); ?>"></div>
-                            <?= get_field('home_text_block_5_text'); ?>
+                            <?= get_field('slide_block_4_left_text'); ?>
+                            <div class="clear"></div>
+                            <?php if(get_field('slide_block_4_left_icons')) : ?>
+                                <div class="icons-block">
+                                    <ul>
+                                        <?php while (have_rows('slide_block_4_left_icons')) : the_row(); ?>
+                                            <li>
+                                                <div class="icon-inner"><img src="<?= get_sub_field('icon'); ?>" class="icon"><span class="descr"><?= get_sub_field('label'); ?></span></div>
+                                            </li>
+                                        <?php endwhile; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
                         </div>
                         <div class="inform-block-right">
-                            <?= get_field('home_text_block_4_text'); ?>
+                            <?= get_field('slide_block_4_right_text'); ?>
                             <?php if(get_field('slide_block_4_right_img')) : ?>
                                 <div class="graph-block"><img src="<?= get_field('slide_block_4_right_img'); ?>"></div>
                             <?php endif; ?>
@@ -120,10 +181,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
         <script>
             var scr = {"scripts":[
                 {"src" : "wp-content/themes/carrot/html/dist/libs/jquery/jquery-1.12.3.min.js", "async" : false},
@@ -138,42 +195,3 @@
     <?php wp_footer(); ?>
 
 </html>
-
-<?php die; /*left untill the fields would be filled */?>
-        <?php $i=1; ?>
-
-        <?php if (have_rows('sliding_block')) : ?>
-
-            <?php while (have_rows('sliding_block')) : the_row(); ?>
-
-                <div class="more-window-<?= $i; ?>">
-                    <div class="close-wrap">
-                        <div class="close-<?= $i; ?>"></div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="left-block">
-                            <div class="image-block"><img src="<?= get_sub_field('left_side_image'); ?>"></div>
-                            <div class="inform-block">
-                                <div class="h2"><?= get_sub_field('left_side_title'); ?></div>
-                                <?= get_sub_field('left_side_text'); ?>
-                            </div>
-                        </div>
-                        <div class="right-block">
-                            <?php if(get_sub_field('right_side_image')) : ?>
-                                <div class="graph-block"><img src="<?= get_sub_field('right_side_image'); ?>"></div>
-                            <?php endif; ?>
-                            <div class="inform-block-bottom">
-                                <?= get_sub_field('right_side_text'); ?>
-                            </div>
-                        </div>
-                        <div class="btn-wrap">
-                            <a class="buttons" href="<?= get_sub_field('link'); ?>">Полная документация</a>
-                        </div>
-                    </div>
-                </div>
-
-                <?php $i++; ?>
-
-            <?php endwhile; ?>
-
-        <?php endif; ?>

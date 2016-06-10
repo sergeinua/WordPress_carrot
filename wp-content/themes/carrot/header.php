@@ -8,9 +8,8 @@
 </head>
 <body>
     <header style="background-image: url(<?= get_template_directory_uri(); ?>/html/dist/img/bg/bg--header.jpg);" class="header">
-
         <nav class="top-nav">
-            <div class="logo"><img src="<?= get_template_directory_uri(); ?>/html/dist/img/logos/logo.png" alt="logo"></div>
+            <div class="logo"><img src="<?= get_template_directory_uri(); ?>/html/dist/img/logos/CarrotLogo.png" alt="logo"></div>
 
             <div class="toggle-menu">
                 <div class="sandwich">
@@ -36,27 +35,30 @@
                 </ul>
                 <ul class="contacts">
                     <?php if(wp_is_mobile()) : ?>
-                        <li><a href="tel:<?= get_field('tel_num', 'options'); ?>"><?= get_field('tel_num', 'options'); ?></a></li>
+                        <li><a href="tel:<?= get_field('tel_num', 'options'); ?>"><?= get_field('tel_num_1', 'options'); ?></a></li>
+                        <li><a href="tel:<?= get_field('tel_num', 'options'); ?>"><?= get_field('tel_num_2', 'options'); ?></a></li>
                     <?php else : ?>
-                        <li><a href="skype:<?= get_field('tel_num', 'options'); ?>"><?= get_field('tel_num', 'options'); ?></a></li>
+                        <li><a href="skype:<?= get_field('tel_num', 'options'); ?>"><?= get_field('tel_num_1', 'options'); ?></a></li>
+                        <li><a href="skype:<?= get_field('tel_num', 'options'); ?>"><?= get_field('tel_num_2', 'options'); ?></a></li>
                     <?php endif; ?>
                     <li><a href="mailto:<?= get_field('email', 'options'); ?>"><?= get_field('email', 'options'); ?></a></li>
                     <li><?= get_field('address', 'options'); ?></li>
                 </ul>
             </div>
-
         </nav>
-
         <div class="header-left-wrap">
             <div class="header-left">
                 <div class="h1">
-                    <?php if (have_rows('home_upper_block_text')) : ?>
+                    <?php if ('home_upper_block_text') : ?>
 
-                        <?php while (have_rows('home_upper_block_text')) : the_row(); ?>
+                        <?= get_field('home_upper_block_text'); ?>
 
-                            <?= get_sub_field('line'); ?>
+                    <?php endif; ?>
+                </div>
+                <div class="h2">
+                    <?php if ('home_upper_block_text_bottom') : ?>
 
-                        <?php endwhile; ?>
+                        <?= get_field('home_upper_block_text_bottom'); ?>
 
                     <?php endif; ?>
                 </div>
