@@ -23,6 +23,7 @@
                     <?= wp_nav_menu([
                         'menu' => 'main-nav',
                         'menu_class' => 'nav',
+                        'items_wrap' => my_nav_wrap(),
                         'container' => false,
                     ]); ?>
                 </ul>
@@ -35,11 +36,11 @@
                 </ul>
                 <ul class="contacts">
                     <?php if(wp_is_mobile()) : ?>
-                        <li><a href="tel:<?= get_field('tel_num', 'options'); ?>"><?= get_field('tel_num_1', 'options'); ?></a></li>
-                        <li><a href="tel:<?= get_field('tel_num', 'options'); ?>"><?= get_field('tel_num_2', 'options'); ?></a></li>
+                        <li><a href="tel:<?= get_field('tel_num_1', 'options'); ?>"><?= get_field('tel_num_1', 'options'); ?></a></li>
+                        <li><a href="tel:<?= get_field('tel_num_2', 'options'); ?>"><?= get_field('tel_num_2', 'options'); ?></a></li>
                     <?php else : ?>
-                        <li><a href="skype:<?= get_field('tel_num', 'options'); ?>"><?= get_field('tel_num_1', 'options'); ?></a></li>
-                        <li><a href="skype:<?= get_field('tel_num', 'options'); ?>"><?= get_field('tel_num_2', 'options'); ?></a></li>
+                        <li><a href="skype:<?= get_field('tel_num_1', 'options'); ?>"><?= get_field('tel_num_1', 'options'); ?></a></li>
+                        <li><a href="skype:<?= get_field('tel_num_2', 'options'); ?>"><?= get_field('tel_num_2', 'options'); ?></a></li>
                     <?php endif; ?>
                     <li><a href="mailto:<?= get_field('email', 'options'); ?>"><?= get_field('email', 'options'); ?></a></li>
                     <li><?= get_field('address', 'options'); ?></li>
