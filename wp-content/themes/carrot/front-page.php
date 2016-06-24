@@ -116,6 +116,7 @@
                                     <div class="cross"></div>
                                 <?php endif; ?>
                             </div><span><?= get_sub_field('bottom_text'); ?></span>
+                            <div class="per">грн/мес</div>
                         </div>
                         <div class="quantity"><?= get_sub_field('quantity'); ?></div>
                     </div>

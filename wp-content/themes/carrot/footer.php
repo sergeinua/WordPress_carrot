@@ -6,11 +6,11 @@
                 <address class="requisites">
                     <div class="phones">
                         <?php if(wp_is_mobile()) : ?>
-                        <a href="tel:"><span>+38(044)369-30-90</span></a>
-                        <a href="tel:"><span>+38(044)369-30-95</span></a>
+                        <a href="tel:">+38(044)369-30-90</a>
+                        <a href="tel:">+38(044)369-30-95</a>
                         <?php else : ?>
-                            <a href="skype:"><span>+38(044)369-30-90</span></a>
-                            <a href="skype:"><span>+38(044)369-30-95</span></a>
+                            <a href="skype:">+38(044)369-30-90</a>
+                            <a href="skype:">+38(044)369-30-95</a>
                         <?php endif; ?>
                     </div>
                     <div class="email"><a href="mailto:info@carrotholding.com">info@carrotholding.com</a></div>
@@ -19,9 +19,11 @@
                     </div>
                 </address>
 
-                <div class="copyright"><a href="https://www.reclamare.ua/" target="_blank"><span class="reclamare"></span><span>Разработка сайта: Студия Reclamare</span></a></div>
+                <div class="copyright"><a href="http://www.reclamare.ua/" target="_blank"><span class="reclamare"></span><span>Разработка сайта: Студия Reclamare</span></a></div>
             </nav>
         </footer>
+
+<!--        <a href="carrot_presentation_fin.pptx" download style="display: none" id="download"></a>-->
 
 
 
@@ -64,9 +66,6 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="btn-wrap">
-                        <a class="buttons" href="<?= get_field('slide_block_1_link'); ?>">Полная документация</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -100,9 +99,6 @@
                                 <div class="graph-block"><img src="<?= get_field('slide_block_2_right_img'); ?>"></div>
                             <?php endif; ?>
                         </div>
-                    </div>
-                    <div class="btn-wrap">
-                        <a class="buttons" href="<?= get_field('slide_block_2_link'); ?>">Полная документация</a>
                     </div>
                 </div>
             </div>
@@ -138,9 +134,6 @@
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="btn-wrap">
-                        <a class="buttons" href="<?= get_field('slide_block_3_link'); ?>">Полная документация</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -174,9 +167,6 @@
                                 <div class="graph-block"><img src="<?= get_field('slide_block_4_right_img'); ?>"></div>
                             <?php endif; ?>
                         </div>
-                    </div>
-                    <div class="btn-wrap">
-                        <a class="buttons" href="<?= get_field('slide_block_4_link'); ?>">Полная документация</a>
                     </div>
                 </div>
             </div>

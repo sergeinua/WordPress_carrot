@@ -29,7 +29,7 @@ add_action( 'init', 'hide_editor_field' );
 function remove_acf_menu() {
     remove_menu_page('edit.php?post_type=acf');
 }
-//add_action( 'admin_menu', 'remove_acf_menu', 999);
+add_action( 'admin_menu', 'remove_acf_menu', 999);
 
 function my_nav_wrap(){
     $wrap  = '<ul id="%1$s" class="%2$s">';
