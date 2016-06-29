@@ -31,7 +31,13 @@
             <div class="modal-dialog modal-form"><span class="h4"></span>
                 <button type="button" data-dismiss="modal" class="close-modal"><span></span><span></span></button>
 
-                    <?= do_shortcode('[contact-form-7 id="4" title="Форма обратной связи"]'); ?>
+                    <?php if(qtrans_getLanguage() == 'ru') : ?>
+                        <?= do_shortcode('[contact-form-7 id="4" title="Форма обратной связи RU"]'); ?>
+                    <?php endif; ?>
+
+                    <?php if(qtrans_getLanguage() == 'ua') : ?>
+                        <?= do_shortcode('[contact-form-7 id="203" title="Форма обратной связи UA"]'); ?>
+                    <?php endif; ?>
 
             </div>
         </div>

@@ -36,5 +36,24 @@ function my_nav_wrap(){
     $wrap .= '%3$s';
     $wrap .= '<li class="presentation-link"><a href="'.get_field('presentation', 'options').'">Презентация</a></li>';
     $wrap .= '</ul>';
+    //language switcher
+    if(qtrans_getLanguage()=='ru') {
+        $wrap .= '<li role="menuitem" class="language"><a href="' . get_site_url() . '/ua" role="link"><span>Рідною мовою</span></a></li>';
+    }
+    if(qtrans_getLanguage()=='ua'){
+        $wrap .= '<li role="menuitem" class="language"><a href="' . get_site_url() . '/ru" role="link"><span>По-русски</span></a></li>';
+    }
     return $wrap;
 }
+
+//language switcher
+function add_last_nav_item($items) {
+    if(qtrans_getLanguage()=='ru') {
+        $items .= '<li role="menuitem" class="language"><a href="' . get_site_url() . '/ua" role="link"><span>Рідною мовою</span></a></li>';
+    }
+    if(qtrans_getLanguage()=='ua'){
+        $items .= '<li role="menuitem" class="language"><a href="' . get_site_url() . '/ru" role="link"><span>По-русски</span></a></li>';
+    }
+    return $items;
+}
+//add_filter('wp_nav_menu_items','add_last_nav_item');
