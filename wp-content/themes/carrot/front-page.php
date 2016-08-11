@@ -80,27 +80,27 @@
     </div>
     <div class="about-title"><?= get_field('home_icon_block_text'); ?></div>
 </section>
-
 <section id="price" class="section-6 s-light">
-    <div class="wrapper">
-        <div id="counter">
-            <div class="statistic-item">
-                <div class="number"><span data-num="<?= get_field('home_num_block_1_num'); ?>" class="numb">0</span></div>
-                <div class="numb-descr"><?= get_field('home_num_block_1_text'); ?></div>
-            </div>
-            <div class="statistic-item">
-                <div class="number"><span data-num="<?= get_field('home_num_block_2_num'); ?>" class="numb">0</span><span class="num-tail">%</span></div>
-                <div class="numb-descr"><?= get_field('home_num_block_2_text'); ?></div>
-            </div>
-            <div class="statistic-item">
-                <div class="number"><span data-num="<?= substr(get_field('home_num_block_3_num'), 0, 2); ?>" class="numb">0</span><span data-num="<?= substr(get_field('home_num_block_3_num'), 2, 4); ?>" class="numb">0</span></div>
-                <div class="numb-descr"><?= get_field('home_num_block_3_text'); ?></div>
+    <?php if(get_field('home_show_icon_block') == true) : ?>
+        <div class="wrapper">
+            <div id="counter">
+                <div class="statistic-item">
+                    <div class="number"><span data-num="<?= get_field('home_num_block_1_num'); ?>" class="numb">0</span></div>
+                    <div class="numb-descr"><?= get_field('home_num_block_1_text'); ?></div>
+                </div>
+                <div class="statistic-item">
+                    <div class="number"><span data-num="<?= get_field('home_num_block_2_num'); ?>" class="numb">0</span><span class="num-tail">%</span></div>
+                    <div class="numb-descr"><?= get_field('home_num_block_2_text'); ?></div>
+                </div>
+                <div class="statistic-item">
+                    <div class="number"><span data-num="<?= substr(get_field('home_num_block_3_num'), 0, 2); ?>" class="numb">0</span><span data-num="<?= substr(get_field('home_num_block_3_num'), 2, 4); ?>" class="numb">0</span></div>
+                    <div class="numb-descr"><?= get_field('home_num_block_3_text'); ?></div>
+                </div>
             </div>
         </div>
-    </div>
+    <?php endif; ?>
     <div class="about-title">Прайс</div>
 </section>
-
 <section class="section-7 s-light">
     <div class="wrapper">
         <?php if (have_rows('home_lowest_block')) : ?>

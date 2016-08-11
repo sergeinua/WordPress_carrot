@@ -6,20 +6,23 @@
                 <address class="requisites">
                     <div class="phones">
                         <?php if(wp_is_mobile()) : ?>
-                        <a href="tel:">+38(044)369-30-90</a>
-                        <a href="tel:">+38(044)369-30-95</a>
+                            <a href="tel:<?= get_field('tel_num_1', 'options'); ?>"><?= get_field('tel_num_1', 'options'); ?></a>
+                            <a href="tel:<?= get_field('tel_num_2', 'options'); ?>"><?= get_field('tel_num_2', 'options'); ?></a>
                         <?php else : ?>
-                            <a href="skype:">+38(044)369-30-90</a>
-                            <a href="skype:">+38(044)369-30-95</a>
+                            <a href="skype:<?= get_field('tel_num_1', 'options'); ?>"><?= get_field('tel_num_1', 'options'); ?></a>
+                            <a href="skype:<?= get_field('tel_num_2', 'options'); ?>"><?= get_field('tel_num_2', 'options'); ?></a>
                         <?php endif; ?>
                     </div>
-                    <div class="email"><a href="mailto:info@carrotholding.com">info@carrotholding.com</a></div>
+                    <div class="email"><a href="mailto:<?= get_field('email', 'options'); ?>"><?= get_field('email', 'options'); ?></a></div>
                     <div class="address">
-                        <p>г. Киев, ул. Михаила Гришка, 9</p>
+                        <p><?= get_field('address', 'options'); ?></p>
                     </div>
                 </address>
 
-                <div class="copyright"><a href="http://www.reclamare.ua/" target="_blank"><span class="reclamare"></span><span>Разработка сайта: Студия Reclamare</span></a></div>
+                <div class="copyright">
+                    <div>made by</div><a href="http://www.reclamare.ua/" target="_blank"><img src="<?= get_template_directory_uri(); ?>/html/dist/img/logos/rcl_logo--svg.svg" alt="Reclamare Logo"></a>
+                    <div>with</div><span class="love"></span>
+                </div>
             </nav>
         </footer>
 
